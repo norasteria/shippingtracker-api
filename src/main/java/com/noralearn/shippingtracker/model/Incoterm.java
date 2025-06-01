@@ -1,6 +1,7 @@
 package com.noralearn.shippingtracker.model;
 
 import jakarta.annotation.Nullable;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -20,6 +21,7 @@ import lombok.Setter;
 public class Incoterm extends BaseModel {
 
   @NotBlank
+  @Column(nullable = false)
   private String code;
 
   @Nullable

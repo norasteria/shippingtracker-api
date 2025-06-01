@@ -20,9 +20,10 @@ import lombok.Setter;
 public class Status extends BaseModel {
 
   @NotBlank
-  @Column(unique = true)
+  @Column(unique = true, nullable = false)
   private String code;
 
   @NotBlank
+  @Column(nullable = false)
   private String name;
 }

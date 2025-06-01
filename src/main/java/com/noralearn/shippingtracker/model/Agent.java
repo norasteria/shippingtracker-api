@@ -20,6 +20,6 @@ import lombok.Setter;
 public class Agent extends BaseModel {
 
   @NotBlank
-  @Column(unique = true)
+  @Column(unique = true, nullable = false)
   private String name;
 }

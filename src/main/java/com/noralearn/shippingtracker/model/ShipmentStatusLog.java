@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,11 +24,11 @@ import org.hibernate.type.SqlTypes;
 @Table(name = "status_shipment_logs")
 public class ShipmentStatusLog extends BaseModel {
 
-  @OneToMany
+  @ManyToOne
   @JoinColumn(name = "shipment_id")
   private Shipment shipment;
 
-  @NotEmpty
+  @NotNull
   @JdbcTypeCode(SqlTypes.JSON)
   @Column(columnDefinition = "jsonb")
   private JsonNode jsonData;

@@ -9,6 +9,7 @@ import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Getter
 @Setter
@@ -22,6 +23,6 @@ public abstract class BaseModel {
   @CreationTimestamp
   private ZonedDateTime createdAt;
 
-  @CreationTimestamp
+  @UpdateTimestamp
   private ZonedDateTime updatedAt;
 }
