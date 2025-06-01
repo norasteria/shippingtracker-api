@@ -2,7 +2,7 @@ package com.noralearn.shippingtracker.service;
 
 import com.noralearn.shippingtracker.dto.response.AgentDto;
 import com.noralearn.shippingtracker.mapper.AgentMapper;
-import com.noralearn.shippingtracker.repsitory.AgentRepository;
+import com.noralearn.shippingtracker.repository.AgentRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

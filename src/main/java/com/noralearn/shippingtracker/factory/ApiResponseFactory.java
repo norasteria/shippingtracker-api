@@ -19,12 +19,12 @@ public class ApiResponseFactory<ResponseData> {
   }
 
   public static <ResponseData> ApiResponseFactory<ResponseData> success(ResponseData data) {
-    return new ApiResponseFactory<>(ResponseStatusEnum.success, data, null);
+    return new ApiResponseFactory<>(ResponseStatusEnum.SUCCESS, data, null);
   }
 
   public static ApiResponseFactory<?> error(String code, String message){
     final ErrorDetail errorDetail = new ErrorDetail(code, message, Instant.now());
-    return new ApiResponseFactory<>(ResponseStatusEnum.error, null, errorDetail);
+    return new ApiResponseFactory<>(ResponseStatusEnum.ERROR, null, errorDetail);
   }
 
   public record ErrorDetail(

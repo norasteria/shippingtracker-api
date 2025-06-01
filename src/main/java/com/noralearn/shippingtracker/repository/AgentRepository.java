@@ -1,4 +1,4 @@
-package com.noralearn.shippingtracker.repsitory;
+package com.noralearn.shippingtracker.repository;
 
 import com.noralearn.shippingtracker.model.Agent;
 import java.util.List;

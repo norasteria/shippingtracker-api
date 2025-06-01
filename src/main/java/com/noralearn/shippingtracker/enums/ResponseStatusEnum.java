@@ -1,6 +1,9 @@
 package com.noralearn.shippingtracker.enums;
 
+/**
+ * Enum representing the status of API response
+ */
 public enum ResponseStatusEnum {
-  success,
-  error
+  SUCCESS,
+  ERROR
 }
