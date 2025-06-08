@@ -22,7 +22,7 @@ public class DestinationPort extends BaseModel {
 
   @NotBlank
   @Column(nullable = false)
-  private String incoterm_code;
+  private String incotermCode;
 
   @Nullable
   @Column(nullable = false)

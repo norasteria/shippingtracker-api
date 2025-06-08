@@ -1,7 +1,7 @@
 package com.noralearn.shippingtracker.dto.response;
 
 
-import java.util.Set;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,13 +13,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OptionsDto {
+public class ShipmentMetadataDto {
 
-  private Set<CustomerDto> customers;
+  private List<CustomerDto> customers;
 
-  private Set<SupplierDto> suppliers;
+  private List<SupplierDto> suppliers;
 
-  private Set<DestinationPortDto> destinationPorts;
+  private List<DestinationPortDto> destinationPorts;
 
-  private Set<AgentDto> agents;
+  private List<AgentDto> agents;
 }
