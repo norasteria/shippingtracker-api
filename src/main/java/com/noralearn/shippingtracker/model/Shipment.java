@@ -31,12 +31,9 @@ public class Shipment extends BaseModel {
   private Agent agent;
 
   @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "incoterm_id")
-  private Incoterm incoterm;
+  @JoinColumn(name = "destination_id")
+  private DestinationPort destinationPort;
 
   @Nullable
   private String documentIndicator;
-
-  @NotBlank
-  private String destinationPort;
 }

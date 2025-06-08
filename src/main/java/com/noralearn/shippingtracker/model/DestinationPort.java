@@ -17,13 +17,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "incoterms")
-public class Incoterm extends BaseModel {
+@Table(name = "destination_ports")
+public class DestinationPort extends BaseModel {
 
   @NotBlank
   @Column(nullable = false)
-  private String code;
+  private String incotermCode;
 
-  @Nullable
-  private String description;
+  @NotBlank
+  @Column(nullable = false)
+  private String name;
 }

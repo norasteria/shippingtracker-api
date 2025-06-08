@@ -11,28 +11,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "customers")
-public class Customer extends BaseModel{
+@Table(name = "suppliers")
+public class Supplier extends BaseModel {
 
   @NotBlank
   @Column(nullable = false)
-  private String companyName;
+  private String name;
 
   @Nullable
-  private String city;
-
-  @Nullable
-  private String address;
-
-  @Nullable
-  private String province;
-
-  @Nullable
-  private String slug;
+  private String alias;
 }

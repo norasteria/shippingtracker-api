@@ -1,0 +1,7 @@
+CREATE TABLE suppliers (
+  id UUID PRIMARY KEY,
+  name TEXT NOT NULL,
+  alias TEXT,
+  created_at TIMESTAMP WITH TIME ZONE NOT NULL,
+  updated_at TIMESTAMP WITH TIME ZONE NOT NULL
+);
