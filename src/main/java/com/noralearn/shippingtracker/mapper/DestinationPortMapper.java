@@ -4,10 +4,15 @@ import com.noralearn.shippingtracker.dto.request.CreateDestinationPortDto;
 import com.noralearn.shippingtracker.dto.response.DestinationPortDto;
 import com.noralearn.shippingtracker.model.DestinationPort;
 import java.util.List;
+import org.mapstruct.Builder;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", builder = @Builder(disableBuilder = false))
 public interface DestinationPortMapper {
+
+  DestinationPortDto destinationToDestinationPortDto(DestinationPort destinationPort);
+
+  DestinationPort crateDestinationPortDtoToDestinationPort(CreateDestinationPortDto createDestinationPortDto);
 
   List<DestinationPortDto> destinationPortsToDestinationDtos(List<DestinationPort> destinationPorts);
 
