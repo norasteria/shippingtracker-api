@@ -1,6 +1,7 @@
 package com.noralearn.shippingtracker.mapper;
 
 import com.noralearn.shippingtracker.dto.request.CreateCustomerDto;
+import com.noralearn.shippingtracker.exception.DataValidationException;
 import com.noralearn.shippingtracker.model.Customer;
 import java.util.List;
 import org.mapstruct.AfterMapping;
@@ -27,11 +28,20 @@ public interface CreateCustomerMapper {
     }
 
     if (createCustomerDto.getSlug() == null || createCustomerDto.getSlug().isBlank()) {
+
+      if (createCustomerDto.getCompanyName() == null || createCustomerDto.getCompanyName().isBlank()){
+        throw new DataValidationException("Company is required.");
+      }
+
       String customSlug = createCustomerDto.getCompanyName()
           .toLowerCase()
           .replaceAll("[^a-z0-9\\s]", "")
           .trim()
           .replaceAll("\\s+", "-");
+
+      if (customSlug.isBlank()){
+        throw new DataValidationException("Customer slug cannot be empty");
+      }
 
       customer.setSlug(customSlug);
     } else {

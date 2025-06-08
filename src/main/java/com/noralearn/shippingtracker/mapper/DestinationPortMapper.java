@@ -12,7 +12,7 @@ public interface DestinationPortMapper {
 
   DestinationPortDto destinationToDestinationPortDto(DestinationPort destinationPort);
 
-  DestinationPort crateDestinationPortDtoToDestinationPort(CreateDestinationPortDto createDestinationPortDto);
+  DestinationPort createDestinationPortDtoToDestinationPort(CreateDestinationPortDto createDestinationPortDto);
 
   List<DestinationPortDto> destinationPortsToDestinationDtos(List<DestinationPort> destinationPorts);
 
