@@ -24,7 +24,7 @@ public class DestinationPort extends BaseModel {
   @Column(nullable = false)
   private String incotermCode;
 
-  @Nullable
+  @NotBlank
   @Column(nullable = false)
   private String name;
 }
